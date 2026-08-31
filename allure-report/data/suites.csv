@@ -1,0 +1,8 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"
+    Automated Test Case: Verify that login fails for invalid user credentials.
+    ","1382","test_invalid_user_login","tests","2026-08-31","passed","2026-08-31","","test_login","",""
+"","331","test_product_search","tests","2026-08-31","passed","2026-08-31","","test_product_search","",""
+"
+    Automated Test Case: Verify that a new user can successfully register an account.
+    ","2025","test_user_registration","tests","2026-08-31","passed","2026-08-31","","test_user_registration","",""

@@ -6,6 +6,10 @@ from playwright.sync_api import expect
 from pages.home_page import HomePage
 from pages.login_page import LoginPage
 from pages.my_account_page import MyAccountPage
+<<<<<<< Updated upstream
+=======
+from Utilities.data_reader_util import read_csv_data, read_json_data
+>>>>>>> Stashed changes
 from Utilities.data_reader_util import read_json_data
 
 
@@ -26,9 +30,14 @@ JSON_FILE = PROJECT_ROOT / "testdata" / "logindata.json"
 # ---------------------------------------------------------
 # Read test data
 # ---------------------------------------------------------
+<<<<<<< Updated upstream
 
 json_data = read_json_data(str(JSON_FILE))
 
+=======
+#csv_data = read_csv_data(str(CSV_FILE))
+json_data = read_json_data(JSON_FILE)
+>>>>>>> Stashed changes
 
 # ---------------------------------------------------------
 # Data Driven Login Test

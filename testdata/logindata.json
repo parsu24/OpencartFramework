@@ -1,8 +1,13 @@
 [
   {
     "testName": "Valid login",
+<<<<<<< Updated upstream
     "email": "YOUR_REGISTERED_EMAIL",
     "password": "YOUR_REGISTERED_PASSWORD",
+=======
+    "email": "pavanol@gi.com",
+    "password": "test@123",
+>>>>>>> Stashed changes
     "expected": "success"
   },
   {

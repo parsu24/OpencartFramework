@@ -1,6 +1,8 @@
+```python
 # search_results_page.py
+
 from playwright.sync_api import Page
-from pages.product_page import ProductPage  # Adjust import path based on your project structure
+from pages.product_page import ProductPage
 
 
 class SearchResultsPage:
@@ -14,8 +16,12 @@ class SearchResultsPage:
         self.page = page
 
         # ===== Locators =====
+
         # Header that appears on the search results page
-        self.search_page_header = page.locator("#content h1", has_text="Search -")
+        self.search_page_header = page.locator(
+            "#content h1",
+            has_text="Search -"
+        )
 
         # List of all product links shown in the search results
         self.search_products = page.locator("h4 > a")
@@ -24,8 +30,7 @@ class SearchResultsPage:
 
     def get_search_results_page_header(self):
         """
-        Returns the header element of the search results page, if it exists.
-        Useful for verifying that the user is on the correct page.
+        Returns the header element of the search results page.
         """
         try:
             return self.search_page_header
@@ -44,35 +49,45 @@ class SearchResultsPage:
         """
         try:
             count = self.search_products.count()
+
             for i in range(count):
                 product = self.search_products.nth(i)
                 title = product.text_content()
+
                 if title and title.strip() == product_name:
                     return product
+
         except Exception as e:
             print(f"Error while checking product existence: {e}")
+
         return None
 
     # ===== Product Selection =====
 
-    def select_product(self, product_name: str) -> ProductPage | None:
+    def select_product(self, product_name: str):
         """
-        Selects a product from the search results by its name and navigates to the Product Page.
+        Selects a product from the search results by its name
+        and navigates to the Product Page.
 
         :param product_name: Name of the product to select
         :return: Instance of ProductPage if the product is found, otherwise None
         """
         try:
             count = self.search_products.count()
+
             for i in range(count):
                 product = self.search_products.nth(i)
                 title = product.text_content()
+
                 if title and title.strip() == product_name:
                     product.click()
                     return ProductPage(self.page)
+
             print(f"Product not found: {product_name}")
+
         except Exception as e:
             print(f"Error while selecting product: {e}")
+
         return None
 
     # ===== Product Count =====
@@ -88,3 +103,4 @@ class SearchResultsPage:
         except Exception as e:
             print(f"Error while getting product count: {e}")
             return None
+```

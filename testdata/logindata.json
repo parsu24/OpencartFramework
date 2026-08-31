@@ -1,8 +1,8 @@
 [
   {
     "testName": "Valid login",
-    "email": "pavanol@ai.com",
-    "password": "test@123",
+    "email": "YOUR_REGISTERED_EMAIL",
+    "password": "YOUR_REGISTERED_PASSWORD",
     "expected": "success"
   },
   {

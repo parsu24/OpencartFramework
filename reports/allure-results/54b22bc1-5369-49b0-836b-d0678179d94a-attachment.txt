@@ -1,0 +1,10 @@
+[OK] Starting browser: chromium
+[OK] Headless mode: False
+[INFO] Navigating to: https://tutorialsninja.com/demo/
+[TRACE] Tracing enabled
+[RESULT] Test 'test_end_to_end_flow' result: [FAIL]
+[SAVE] Trace saved: /Users/parsu/Documents/PythonProject/PythonProject/OpencartFramework/reports/traces/test_end_to_end_flow_trace.zip
+[SAVE] Screenshot saved: /Users/parsu/Documents/PythonProject/PythonProject/OpencartFramework/reports/screenshots/test_end_to_end_flow.png
+[ATTACH] Screenshot attached to Allure report
+[ATTACH] Video attached to Allure report
+[CLEANUP] Closing browser context...

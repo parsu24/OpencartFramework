@@ -5,22 +5,27 @@ import openpyxl
 
 def read_json_data(file_path: str):
     """
-    Reads test data from a JSON file and returns a list of tuples.
-    Example JSON structure:
-    [
-        {"email": "test1@example.com", "password": "abc123", "validity": "valid"},
-        {"email": "test2@example.com", "password": "xyz123", "validity": "invalid"}
-    ]
+    Reads login test data from a JSON file and returns
+    a list of tuples in the order expected by pytest.
     """
+
     data = []
+
     try:
-        file= open(file_path, "r")
-        json_data = json.load(file)
+        with open(file_path, "r", encoding="utf-8") as file:
+            json_data = json.load(file)
+
         for record in json_data:
-            #data.append((record["email"], record["password"], record["validity"]))
-            data.append(tuple(record.values())) # Convert dictionary values to tuple (preserve order of keys)
+            data.append((
+                record["testName"],
+                record["email"],
+                record["password"],
+                record["expected"]
+            ))
+
     except Exception as e:
         print(f"Error reading JSON file: {e}")
+
     return data
 
 

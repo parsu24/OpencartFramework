@@ -1,4 +1,3 @@
-```python
 import time
 import pytest
 from pathlib import Path
@@ -88,4 +87,4 @@ def test_login_data_driven(
         expect(
             login_page.get_login_error()
         ).to_be_visible(timeout=3000)
-```
+

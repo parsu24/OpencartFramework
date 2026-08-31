@@ -4,7 +4,7 @@ import openpyxl
 
 
 def read_json_data(file_path: str):
-    """
+    
     Reads test data from a JSON file.
 
     Expected JSON structure:
@@ -29,7 +29,7 @@ def read_json_data(file_path: str):
             ("Valid login", "pavanol@gi.com", "test@123", "success"),
             ("Invalid login", "abcxyz@xyz.com", "abcxyx", "failure")
         ]
-    """
+    
 
     data = []
 
@@ -65,9 +65,9 @@ def read_json_data(file_path: str):
 
 
 def read_csv_data(file_path: str):
-    """
+    
     Reads test data from a CSV file.
-    """
+    
 
     data = []
 
@@ -93,9 +93,9 @@ def read_csv_data(file_path: str):
 
 
 def read_excel_data(file_path: str, sheet_name: str = None):
-    """
+    
     Reads test data from an Excel file.
-    """
+    
 
     data = []
 
@@ -119,4 +119,4 @@ def read_excel_data(file_path: str, sheet_name: str = None):
         raise
 
     return data
-```
+

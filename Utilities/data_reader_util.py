@@ -1,12 +1,14 @@
 import json
 import csv
 import openpyxl
+import json
+import os
 
 
 def read_json_data(file_path):
     """
-    Reads test data from a JSON file.
-    Returns a list of dictionaries.
+    Reads test data from a JSON file
+    and returns a list of tuples.
     """
 
     # Convert relative path to absolute path
@@ -15,17 +17,23 @@ def read_json_data(file_path):
 
     print(f"Reading JSON file: {file_path}")
 
-    if not os.path.exists(file_path):
-        raise FileNotFoundError(
-            f"JSON file not found: {file_path}"
-        )
-
-    with open(file_path, "r", encoding="utf-8") as file:
+    with open(file_path, "r") as file:
         data = json.load(file)
 
-    print(f"JSON data loaded successfully: {data}")
+    test_data = []
 
-    return data
+    for row in data:
+        test_data.append(
+            (
+                row["testName"],
+                row["email"],
+                row["password"],
+                row["expected"]
+            )
+        )
+
+    return test_data
+
 
 def read_csv_data(file_path: str):
     """

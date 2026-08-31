@@ -1,7 +1,0 @@
-[OK] Starting browser: chromium
-[OK] Headless mode: False
-[INFO] Navigating to: https://tutorialsninja.com/demo/
-[TRACE] Tracing enabled
-[RESULT] Test 'test_product_search' result: [PASS]
-[SAVE] Trace saved: /Users/parsu/Documents/PythonProject/PythonProject/OpencartFramework/reports/traces/test_product_search_trace.zip
-[CLEANUP] Closing browser context...

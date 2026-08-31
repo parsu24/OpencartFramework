@@ -1,4 +1,3 @@
-```python
 # search_results_page.py
 
 from playwright.sync_api import Page
@@ -103,4 +102,3 @@ class SearchResultsPage:
         except Exception as e:
             print(f"Error while getting product count: {e}")
             return None
-```

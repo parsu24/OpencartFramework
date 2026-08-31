@@ -1,4 +1,3 @@
-```python
 import re
 import pytest
 from pathlib import Path
@@ -105,4 +104,4 @@ def test_login_data_driven(
             f"Invalid expected value '{expected}' "
             f"for test '{testName}'"
         )
-```
+
